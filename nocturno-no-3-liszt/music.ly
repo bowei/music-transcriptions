@@ -48,6 +48,10 @@ theMusic = {
 >>
 
 % measure 6
+<<
+\new Voice \relative {\voiceOne g''8\rest {e, g c g e} g'8\rest {e, g c g e}}
+\new Voice \relative {\voiceTwo c'2.~ c4 a4\rest g4}
+>>
 
 }
 
