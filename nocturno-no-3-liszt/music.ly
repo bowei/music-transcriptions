@@ -43,7 +43,7 @@ theMusic = {
 
 % measure 5
 <<
-\new Voice \relative {\voiceOne g''8\rest {f, g e' g, f} g'8\rest {f, g b g f}}
+\new Voice \relative {\voiceOne g''8\rest {f,! g e' g, f} g'8\rest {f, g b g f}}
 \new Voice \relative {\voiceTwo a4 b c e2 d4}
 >>
 
@@ -51,6 +51,26 @@ theMusic = {
 <<
 \new Voice \relative {\voiceOne g''8\rest {e, g c g e} g'8\rest {e, g c g e}}
 \new Voice \relative {\voiceTwo c'2.~ c4 a4\rest g4}
+>>
+
+% measure 7
+<<
+\new Voice \relative {\voiceOne g''8\rest {g, c e c g} g'8\rest {g, c e c g}}
+\new Voice \relative {\voiceTwo e'2. e2.}
+>>
+
+% measure 8
+<<
+\new Voice \relative {\voiceOne g''8\rest {gs, d' e d gs,} g'8\rest {gs, d' e d gs,}}
+\new Voice \relative {\voiceTwo e'2.~ e2 e4}
+\new Voice \relative {\voiceFour e2.\rest bf'4. a4\rest}
+>>
+
+% measure 9
+<<
+\new Voice \relative {\voiceOne g''8\rest {g,! cs e cs g} g'8\rest {g, cs e cs g}}
+\new Voice \relative {\voiceTwo e'2 e4 f2 e4}
+\new Voice \relative {\voiceFour a4}
 >>
 
 }
