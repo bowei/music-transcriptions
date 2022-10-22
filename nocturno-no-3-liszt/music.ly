@@ -35,6 +35,12 @@ theMusic = {
 \new Voice \relative {\voiceFour a2. e2.\rest}
 >>
 
+%5
+<<
+\new Voice \relative {\voiceOne g''8\rest {fs, c' e c fs,} g'8\rest {fs, c' e c fs,}}
+\new Voice \relative {\voiceTwo e'2. \> a,2 \! a4 \!}
+>>
+
 }
 
 \score {
