@@ -394,22 +394,28 @@ theMusic = {
 	%25
 	af g \stopBarre
 
-	%% rapid run section
-	{
-	<af,, c>128 [ <g b> <c f> <b d> <f' af> <d g>
-	<c' af> <g b> <c f> <b d> <f' af!> <d g>
-	<af' c> <g b> <c f> <d b> af' g
-	af g <c, f> <b d> <af! c> <g b>
-	<af! c> <g b> <f af!> <d g> ]
+	s2 % invisible rest so the run below can be done as grace notes
+
+	%% rapid run section (64th notes according to the score)
+	\grace {
+	<af,, c>4 <g b> <c f> <b d>
+	<f' af> <d g> <c' af> <g b>
+	<c^\3 f^\2> <b^\0 d^\3> <f'^\3 af!^\2> <d^\4 g^\3>
+	<af'^\2 c^\1> <g^\3 b^\2> <c f> <d b>
+	af' g af g
+	<c, f> <b d> <af! c> <g b>
+	<af! c> <g b> <f af!> <d g>
+
+	<c^\3 f^\2> \startHalfBarre #3 "III" <b! d> <c f> <b d> \stopBarre
+
 
 	\bar ""
 	\break
 
-	<c f>128 [ <b! d> <c f> <b d> <c af!>
-	<b g> <af! f> <g d> <f af> <g d> <f c>
-	<d b!> ]
+	 <c af!> <b g> <af! f> <g d>
+	<f af> <g d> <f c>
 
-	<c f> [ % 13 of these slides
+	<d b!> <c f>  % 13 of these slides
 	<d b> <c f>
 	<d b> <c f>
 	<d b> <c f>
@@ -422,9 +428,9 @@ theMusic = {
 	<d b> <c f>
 	<d b> <c f>
 	<d b>
-	]
+
 	} % end of run
-	
+
  	c'4\rest
 	c\rest^\fermata
 	fs |
@@ -432,6 +438,7 @@ theMusic = {
 }
 >>
 
+% Measure 26 TODO
 <<
 \key ef \major
 
