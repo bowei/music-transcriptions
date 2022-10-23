@@ -197,52 +197,105 @@ theMusic = {
 
 % measure 5
 <<
-\new Voice \relative {\voiceOne g''8\rest {f,! g e' g, f} g'8\rest {f,_\4 g b g f}}
-\new Voice \relative {\voiceTwo a4 b c e2_\5 d4_\5}
+\new Voice \relative {
+	\voiceOne
+	g''8\rest {f,! g e' g, f} g'8\rest {f,_\4 g b g f}
+}
+\new Voice \relative {
+	\voiceTwo
+	a4 b c e2_\5 d4_\5
+}
 >>
 
 % measure 6
 <<
-\new Voice \relative {\voiceOne g''8\rest {e, g c g e} g'8\rest {e, g c g e}}
-\new Voice \relative {\voiceTwo c'2.~ c4 a4\rest g4}
+\new Voice \relative {
+	\voiceOne
+	g''8\rest {e, g c g e} g'8\rest {e, g c g e}
+}
+\new Voice \relative {
+	\voiceTwo
+	c'2.~ c4 a4\rest g4
+}
 >>
 
 % measure 7
 <<
-\new Voice \relative {\voiceOne g''8\rest {g, c e c g} g'8\rest {g, c e c g}}
-\new Voice \relative {\voiceTwo e'2. e2.}
+\new Voice \relative {
+	\voiceOne
+	g''8\rest {g, c e c g} g'8\rest {g, c e c g}
+}
+\new Voice \relative {
+	\voiceTwo
+	e'2. e2.
+}
 >>
 
 % measure 8
 <<
-\new Voice \relative {\voiceOne g''8\rest \< {gs, d' e d gs,} g'8\rest {gs, d' e d gs, \!}}
-\new Voice \relative {\voiceTwo e'2.~ e2 e4}
-\new Voice \relative {\voiceFour e2.\rest bf'4. a4\rest}
+\new Voice \relative {
+	\voiceOne
+	g''8\rest \< {gs, d' e d gs,} g'8\rest {gs, d' e d gs, \!}
+}
+\new Voice \relative {
+	\voiceTwo
+	e'2.~ e2 e4
+}
+\new Voice \relative {
+	\voiceFour
+	e2.\rest bf'4. a4\rest
+}
 >>
 
 % measure 9
 <<
-\new Voice \relative {\voiceOne g''8\rest {g,! cs e cs g} g'8\rest {g, cs e cs g}}
-\new Voice \relative {\voiceTwo e'2 e4 f2 e4}
-\new Voice \relative {\voiceFour a4}
+\new Voice \relative {
+	\voiceOne
+	g''8\rest {g,! cs e cs g} g'8\rest {g, cs e cs g}
+}
+\new Voice \relative {
+	\voiceTwo
+	e'2 e4 f2 e4
+}
+\new Voice \relative {
+	\voiceFour
+	a4
+}
 >>
 
 % measure 10
 <<
-\new Voice \relative {\voiceOne g''8\rest {fs,_\4 c'_\3 a' e_\2 c} {d, c'_\3 d_\2 a' <fs a,> d}}
-\new Voice \relative {\voiceTwo a2. a2\rest a4}
+\new Voice \relative {
+	\voiceOne
+	g''8\rest {fs,_\4 c'_\3 a' e_\2 c} {d, c'_\3 d_\2 a' <fs a,> d}
+}
+\new Voice \relative {
+	\voiceTwo a2. a2\rest a4
+}
 >>
 
 % measure 11
 <<
-\new Voice \relative {\voiceOne g''8\rest {d, f b g f} g'8\rest {f,_\4 g b g f}}
-\new Voice \relative {\voiceTwo a4 b c e2_\5 d4_\5}
+\new Voice \relative {
+	\voiceOne
+	g''8\rest {d, f b g f} g'8\rest {f,_\4 g b g f}
+}
+\new Voice \relative {
+	\voiceTwo
+	a4 b c e2_\5 d4_\5
+}
 >>
 
 % measure 12
 <<
-\new Voice \relative {\voiceOne g''8\rest {e, g c g e} {c e c' g e c}}
-\new Voice \relative {\voiceTwo c'2. f,2\rest f8\rest c'}
+\new Voice \relative {
+	\voiceOne
+	g''8\rest {e, g c g e} {c e c' g e c}
+}
+\new Voice \relative {
+	\voiceTwo
+	c'2. f,2\rest f8\rest c'
+}
 >>
 
 % measure 13
@@ -253,23 +306,37 @@ theMusic = {
 	{g8\rest f, c' af f g'8\rest} 
 	\stopBarre 
 }
-\new Voice \relative {\voiceTwo c'2~ c8 b c2~ c8 d8}
+\new Voice \relative {
+	\voiceTwo
+	c'2~ c8 b c2~ c8 d8
+}
 >>
 
 % measure 14
 <<
-\new Voice \relative {\voiceOne g''8\rest {g, e' c g e} {c g' e' c g g'\rest}}
-\new Voice \relative {\voiceTwo e'2. f,2\rest f8\rest e'}
+\new Voice \relative {
+	\voiceOne
+	g''8\rest {g, e' c g e} {c g' e' c g g'\rest}
+}
+\new Voice \relative {
+	\voiceTwo
+	e'2. f,2\rest f8\rest e'
+}
 >>
 
 % measure 15
 <<
-\new Voice \relative {\voiceOne g''8\rest {a, e' c a g'\rest} {g\rest a, e' c a g'\rest}}
-\new Voice \relative {\voiceTwo e'2~ e8 ds e2~ e8 fs}
+\new Voice \relative {
+	\voiceOne
+	g''8\rest {a, e' c a g'\rest} {g\rest a, e' c a g'\rest}
+}
+\new Voice \relative {
+	\voiceTwo
+	e'2~ e8 ds e2~ e8 fs
+}
 >>
 
 % measure 16, 17, 18
-% TODO: Barre IV
 <<
 \new Voice \relative {
 	\voiceOne 
