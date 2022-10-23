@@ -133,32 +133,66 @@ theMusic = {
 \time 6/4
 
 % measure 0
-{\voiceTwo \tempo "poco allegro con affetto" \partial 4 g4-3 }
+{
+\voiceTwo
+\tempo "poco allegro con affetto"
+\partial 4 g4-3 
+}
 
 % measure 1
 <<
-\new Voice \relative {\voiceOne g''8\rest {g, c e c g} g'8\rest {g, c e c g}}
-\new Voice \relative {\voiceTwo e'2. e2.}
+\new Voice \relative {
+	\voiceOne
+	g''8\rest {g, c e c g} g'8\rest {g, c e c g}
+}
+\new Voice \relative {
+	\voiceTwo
+	e'2. e2.
+}
 >>
 
 % measure 2
 <<
-\new Voice \relative {\voiceOne g''8\rest {gs, d' e d gs,} g'8\rest {gs, d' e d gs,}}
-\new Voice \relative {\voiceTwo e'2.~ e2 e4}
-\new Voice \relative {\voiceFour e2.\rest e2.}
+\new Voice \relative {
+	\voiceOne 
+	g''8\rest {gs, d' e d gs,} g'8\rest {gs, d' e d gs,}
+}
+\new Voice \relative {
+	\voiceTwo
+	e'2.~ e2 e4
+}
+\new Voice \relative {
+	\voiceFour
+	e2.\rest e2.
+}
 >>
 
 % measure 3
 <<
-\new Voice \relative {\voiceOne g''8\rest {g,! cs e cs g} g'8\rest {g, cs e cs g}}
-\new Voice \relative {\voiceTwo e'2 e4 \< f2 e4 \!}
-\new Voice \relative {\voiceFour a2. e2.\rest}
+\new Voice \relative {
+	\voiceOne
+	g''8\rest {g,! cs e cs g} g'8\rest {g, cs e cs g}
+}
+\new Voice \relative {
+	\voiceTwo
+	e'2 e4 \< f2 e4 \!
+}
+\new Voice \relative {
+	\voiceFour
+	a2. e2.\rest
+}
 >>
 
 % measure 4
 <<
-\new Voice \relative {\voiceOne g''8\rest {fs,_\4 \> c'_\3 e c fs, \!} g'8\rest {fs, c' e c fs,}}
-\new Voice \relative {\voiceTwo e'2._\5 a,2 \! a4}
+\new Voice \relative {
+	\voiceOne
+	g''8\rest {fs,_\4 \> c'_\3 e c fs, \!} g'8\rest {fs, c' e c fs,}
+}
+\new Voice \relative {
+	\voiceTwo
+	e'2._\5 a,2 \! a4
+}
 >>
 
 % measure 5
