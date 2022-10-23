@@ -23,10 +23,10 @@ Prefix = \markup {
 }
 
 #(define-markup-command (prefix layout props string-qty) (integer?)
-  (interpret-markup layout props 
+  (interpret-markup layout props
     (if (member string-qty (iota 4 2 1))
         #{
-           \markup { 
+           \markup {
              \override #'(font-family . typewriter)
              \concat {
                \fontsize #-4 {
@@ -34,39 +34,39 @@ Prefix = \markup {
                    \hspace #-.2
                    \raise #.2 "/"
                    \hspace #-.2
-                   "6" 
+                   "6"
                  }
                \Prefix
              }
            }
         #}
         #{ \markup\Prefix #})))
-        
-startBarre = 
-#(define-event-function (arg-string-qty str) 
+
+startBarre =
+#(define-event-function (arg-string-qty str)
   ((integer?) markup?)
-  (let* ((pre-fix 
+  (let* ((pre-fix
            (if arg-string-qty #{ \markup \prefix #arg-string-qty #} Prefix))
          (mrkp (markup #:upright #:concat (pre-fix str #:hspace 0.3))))
-  
+
     (define (width grob text-string)
       (let* ((layout (ly:grob-layout grob))
-             (props (ly:grob-alist-chain 
-                       grob 
+             (props (ly:grob-alist-chain
+                       grob
                        (ly:output-def-lookup layout 'text-font-defaults))))
-      (interval-length 
-        (ly:stencil-extent 
-          (interpret-markup layout props (markup text-string)) 
+      (interval-length
+        (ly:stencil-extent
+          (interpret-markup layout props (markup text-string))
           X))))
-    #{  
-      \tweak after-line-breaking 
+    #{
+      \tweak after-line-breaking
         #(lambda (grob)
           (let* ((mrkp-width (width grob mrkp))
                  (line-thickness (ly:staff-symbol-line-thickness grob)))
-           (ly:grob-set-nested-property! 
-             grob 
-             '(bound-details left padding) 
-             (+ (/ mrkp-width -4) (* line-thickness 2)))))     
+           (ly:grob-set-nested-property!
+             grob
+             '(bound-details left padding)
+             (+ (/ mrkp-width -4) (* line-thickness 2)))))
       \tweak font-size -2
       \tweak style #'line
       \tweak bound-details.left.text #mrkp
@@ -81,31 +81,31 @@ startBarre =
       \tweak bound-details.right-broken.text ##f
       \tweak bound-details.right.text
         \markup
-          \with-dimensions #'(0 . 0) #'(-.3 . 0) 
+          \with-dimensions #'(0 . 0) #'(-.3 . 0)
           \draw-line #'(0 . -1)
-      \startTextSpan  
+      \startTextSpan
     #}))
-    
+
 #(define startHalfBarre startBarre)
 
-startModernBarre = 
-#(define-event-function (fretnum partial) 
+startModernBarre =
+#(define-event-function (fretnum partial)
    (number? number?)
     #{
       \tweak bound-details.left.text
-        \markup 
-          \small \bold \concat { 
+        \markup
+          \small \bold \concat {
           %\Prefix
           #(format #f "~@r" fretnum)
           \hspace #.2
-          \lower #.3 \fontsize #-2 #(number->string partial) 
+          \lower #.3 \fontsize #-2 #(number->string partial)
           \hspace #.5
         }
       \tweak font-size -1
       \tweak font-shape #'upright
       \tweak style #'dashed-line
       \tweak dash-fraction #0.3
-      \tweak dash-period #1 
+      \tweak dash-period #1
       \tweak bound-details.left.stencil-align-dir-y #0.35
       \tweak bound-details.left.padding 0.25
       \tweak bound-details.left.attach-dir -1
@@ -119,9 +119,9 @@ startModernBarre =
       \tweak bound-details.right-broken.text ##f
       \tweak bound-details.right.text
         \markup
-          \with-dimensions #'(0 . 0) #'(-.3 . 0) 
+          \with-dimensions #'(0 . 0) #'(-.3 . 0)
           \draw-line #'(0 . -1)
-      \startTextSpan 
+      \startTextSpan
    #})
 
 stopBarre = \stopTextSpan
@@ -136,7 +136,7 @@ theMusic = {
 {
 \voiceTwo
 \tempo "poco allegro con affetto"
-\partial 4 g4-3 
+\partial 4 g4-3
 }
 
 % measure 1
@@ -154,7 +154,7 @@ theMusic = {
 % measure 2
 <<
 \new Voice \relative {
-	\voiceOne 
+	\voiceOne
 	g''8\rest {gs, d' e d gs,} g'8\rest {gs, d' e d gs,}
 }
 \new Voice \relative {
@@ -301,10 +301,10 @@ theMusic = {
 % measure 13
 <<
 \new Voice \relative {
-	\voiceOne 
-	g''8\rest \startHalfBarre #3 "I" {f, c' af f g'8\rest} 
-	{g8\rest f, c' af f g'8\rest} 
-	\stopBarre 
+	\voiceOne
+	g''8\rest \startHalfBarre #3 "I" {f, c' af f g'8\rest}
+	{g8\rest f, c' af f g'8\rest}
+	\stopBarre
 }
 \new Voice \relative {
 	\voiceTwo
@@ -339,19 +339,68 @@ theMusic = {
 % measure 16, 17, 18
 <<
 \new Voice \relative {
-	\voiceOne 
-	g''8\rest \startBarre "IV" {b, e gs e b} {g'\rest b, e gs e b} 
+	\voiceOne
+	g''8\rest \startBarre "IV" {b, e gs e b} {g'\rest b, e gs e b}
 	g'8\rest {cs, e gs e cs} {g'\rest cs, e gs e cs}
 	g'8\rest {bs, ds gs ds bs} {g'\rest gs, bs ds bs gs}
 	\stopBarre
 }
 \new Voice \relative {
-	\voiceTwo 
+	\voiceTwo
 	gs'2. gs2.
 	<gs cs,>2.~ <gs cs,>2.
-	<gs gs,>2.~\arpeggio <ds gs,>2. 
+	<gs gs,>2.~\arpeggio <ds gs,>2.
 }
 >>
+
+% measure 19, 20, 21
+<<
+\new Voice \relative {
+	\voiceOne
+	g''8\rest \startBarre "I" af, c f c af
+	g'\rest f, af c af f
+	\stopBarre
+
+	g'8\rest \startBarre "III" g, b d b g \stopBarre
+	g'\rest \startBarre "I" af, c f c af \stopBarre
+	g'8\rest g, b d b g
+	g'\rest \startBarre "I" af, c f c af \stopBarre
+}
+\new Voice \relative {
+	\voiceTwo
+	<af f'>2.~ \arpeggio af2 c4
+	<g d'>2. <af f'>2 \arpeggio ef'4
+	d4_\5 cs_\5 d_\5 <af f'>2 \arpeggio ef'4
+}
+>>
+
+% measure 22, 23, 24, 25
+<<
+\new Voice \relative {
+	\voiceOne
+	g''8\rest g, b d b g
+	g'8\rest c, d af' d, c
+}
+
+\new Voice \relative {
+	\voiceTwo
+	%22
+	d'4 cs d af'2.
+	%23
+	af4^\fermata \tempo "slowly" g f ef d c
+	%24
+	b g'\rest g\rest
+	g,8 \startBarre "III" d' f b d f \stopBarre
+	%25
+	af g
+        %% rapid section with tiny notes
+}
+>>
+
+
+% measure 23
+% measure 24
+
 }
 
 \score { \theMusic }
