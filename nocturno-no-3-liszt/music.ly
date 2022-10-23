@@ -211,7 +211,11 @@ theMusic = {
 
 % measure 13
 <<
-\new Voice \relative {\voiceOne g''8\rest \startHalfBarre #3 "I" {f, c' af f g'8\rest} {g8\rest f, c' af f g'8\rest} \stopBarre }
+\new Voice \relative {
+	\voiceOne 
+	g''8\rest \startHalfBarre #3 "I" {f, c' af f g'8\rest} 
+	{g8\rest f, c' af f g'8\rest} \stopBarre 
+}
 \new Voice \relative {\voiceTwo c'2~ c8 b c2~ c8 d8}
 >>
 
