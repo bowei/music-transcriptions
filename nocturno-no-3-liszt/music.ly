@@ -252,6 +252,7 @@ theMusic = {
 }
 
 \score {
+\midi {}
 <<
 \new Staff
 \key c \major
