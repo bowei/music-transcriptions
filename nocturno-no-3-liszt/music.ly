@@ -349,7 +349,7 @@ theMusic = {
 	\voiceTwo 
 	gs'2. gs2.
 	<gs cs,>2.~ <gs cs,>2.
-	<gs gs,>2.~ <ds gs,>2. 
+	<gs gs,>2.~\arpeggio <ds gs,>2. 
 }
 >>
 }
