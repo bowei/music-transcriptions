@@ -221,9 +221,16 @@ theMusic = {
 
 % measure 14
 <<
-\new Voice \relative {\voiceOne g''8\rest {g, e' c g e} {c g' e' c g g\rest}}
-\new Voice \relative {\voiceTwo e'2. f,2\rest f8\rest e'}
+\new voice \relative {\voiceone g''8\rest {g, e' c g e} {c g' e' c g g\rest}}
+\new voice \relative {\voicetwo e'2. f,2\rest f8\rest e'}
 >>
+
+% measure 15
+<<
+\new voice \relative {\voiceone g''8\rest {g, e' c g e} {c g' e' c g g\rest}}
+\new voice \relative {\voicetwo e'2. f,2\rest f8\rest e'}
+>>
+
 
 }
 
