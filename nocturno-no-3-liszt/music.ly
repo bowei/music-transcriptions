@@ -155,8 +155,8 @@ theMusic = {
 
 % measure 4
 <<
-\new Voice \relative {\voiceOne g''8\rest {fs,_\4 c'_\3 e c fs,} g'8\rest {fs, c' e c fs,}}
-\new Voice \relative {\voiceTwo e'2._\5 \> a,2 \! a4 \!}
+\new Voice \relative {\voiceOne g''8\rest {fs,_\4 \> c'_\3 e c fs, \!} g'8\rest {fs, c' e c fs,}}
+\new Voice \relative {\voiceTwo e'2._\5 a,2 \! a4}
 >>
 
 % measure 5
@@ -217,6 +217,12 @@ theMusic = {
 	{g8\rest f, c' af f g'8\rest} \stopBarre 
 }
 \new Voice \relative {\voiceTwo c'2~ c8 b c2~ c8 d8}
+>>
+
+% measure 14
+<<
+\new Voice \relative {\voiceOne g''8\rest {g, e' c g e} {c g' e' c g g\rest}}
+\new Voice \relative {\voiceTwo e'2. f,2\rest f8\rest e'}
 >>
 
 }
