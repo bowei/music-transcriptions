@@ -214,24 +214,41 @@ theMusic = {
 \new Voice \relative {
 	\voiceOne 
 	g''8\rest \startHalfBarre #3 "I" {f, c' af f g'8\rest} 
-	{g8\rest f, c' af f g'8\rest} \stopBarre 
+	{g8\rest f, c' af f g'8\rest} 
+	\stopBarre 
 }
 \new Voice \relative {\voiceTwo c'2~ c8 b c2~ c8 d8}
 >>
 
 % measure 14
 <<
-\new voice \relative {\voiceone g''8\rest {g, e' c g e} {c g' e' c g g\rest}}
-\new voice \relative {\voicetwo e'2. f,2\rest f8\rest e'}
+\new Voice \relative {\voiceOne g''8\rest {g, e' c g e} {c g' e' c g g'\rest}}
+\new Voice \relative {\voiceTwo e'2. f,2\rest f8\rest e'}
 >>
 
 % measure 15
 <<
-\new voice \relative {\voiceone g''8\rest {g, e' c g e} {c g' e' c g g\rest}}
-\new voice \relative {\voicetwo e'2. f,2\rest f8\rest e'}
+\new Voice \relative {\voiceOne g''8\rest {a, e' c a g'\rest} {g\rest a, e' c a g'\rest}}
+\new Voice \relative {\voiceTwo e'2~ e8 ds e2~ e8 fs}
 >>
 
-
+% measure 16, 17, 18
+% TODO: Barre IV
+<<
+\new Voice \relative {
+	\voiceOne 
+	g''8\rest \startBarre "IV" {b, e gs e b} {g'\rest b, e gs e b} 
+	g'8\rest {cs, e gs e cs} {g'\rest cs, e gs e cs}
+	g'8\rest {bs, ds gs ds bs} {g'\rest gs, bs ds bs gs}
+	\stopBarre
+}
+\new Voice \relative {
+	\voiceTwo 
+	gs'2. gs2.
+	<gs cs,>2.~ <gs cs,>2.
+	<gs gs,>2.~ <ds gs,>2. 
+}
+>>
 }
 
 \score {
