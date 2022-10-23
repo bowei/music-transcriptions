@@ -128,6 +128,8 @@ stopBarre = \stopTextSpan
 
 theMusic = {
 
+\new Staff
+\key c \major
 \time 6/4
 
 % measure 0
@@ -179,7 +181,7 @@ theMusic = {
 
 % measure 8
 <<
-\new Voice \relative {\voiceOne g''8\rest {gs, d' e d gs,} g'8\rest {gs, d' e d gs,}}
+\new Voice \relative {\voiceOne g''8\rest \< {gs, d' e d gs,} g'8\rest {gs, d' e d gs, \!}}
 \new Voice \relative {\voiceTwo e'2.~ e2 e4}
 \new Voice \relative {\voiceFour e2.\rest bf'4. a4\rest}
 >>
@@ -251,11 +253,4 @@ theMusic = {
 >>
 }
 
-\score {
-\midi {}
-<<
-\new Staff
-\key c \major
-\theMusic
->>
-}
+\score { \theMusic }
