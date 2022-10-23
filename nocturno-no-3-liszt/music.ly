@@ -393,14 +393,54 @@ theMusic = {
 	g,8 \startBarre "III" d' f b d f
 	%25
 	af g \stopBarre
-        %% rapid section with tiny notes
+
+	%% rapid run section
+	{
+	<af,, c>128 [ <g b> <c f> <b d> <f' af> <d g>
+	<c' af> <g b> <c f> <b d> <f' af!> <d g>
+	<af' c> <g b> <c f> <d b> af' g
+	af g <c, f> <b d> <af! c> <g b>
+	<af! c> <g b> <f af!> <d g> ]
+
+	\bar ""
+	\break
+
+	<c f>128 [ <b! d> <c f> <b d> <c af!>
+	<b g> <af! f> <g d> <f af> <g d> <f c>
+	<d b!> ]
+
+	<c f> [ % 13 of these slides
+	<d b> <c f>
+	<d b> <c f>
+	<d b> <c f>
+	<d b> <c f>
+	<d b> <c f>
+	<d b> <c f>
+	<d b> <c f>
+	<d b> <c f>
+	<d b> <c f>
+	<d b> <c f>
+	<d b> <c f>
+	<d b>
+	]
+	} % end of run
 	
+ 	c'4\rest
+	c\rest^\fermata
+	fs |
+	\bar "||"
 }
 >>
 
+<<
+\key ef \major
 
-% measure 23
-% measure 24
+\new Voice \relative {
+	\voiceOne
+	g''8\rest g, b d b g
+	g'8\rest c, d af' d, c
+}
+>>
 
 }
 
