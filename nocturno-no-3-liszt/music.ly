@@ -390,10 +390,11 @@ theMusic = {
 	af4^\fermata \tempo "slowly" g f ef d c
 	%24
 	b g'\rest g\rest
-	g,8 \startBarre "III" d' f b d f \stopBarre
+	g,8 \startBarre "III" d' f b d f
 	%25
-	af g
+	af g \stopBarre
         %% rapid section with tiny notes
+	
 }
 >>
 
