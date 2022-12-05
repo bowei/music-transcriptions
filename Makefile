@@ -9,4 +9,5 @@ clean:
 
 %.pdf : %.ly
 	@echo "[BUILD] $< -> $@"
-	lilypond -o $(@:.pdf=) $< 
+	lilypond -o $(@:.pdf=) $<
+
