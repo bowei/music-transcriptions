@@ -61,6 +61,34 @@ arranger = "(arr. for guitar)"
 	     a2
 	}
     >>
+    % measure 6
+    <<
+	\new Voice {
+	     \voiceOne
+	     <cs' as'>8. <d' b'>16
+	     <fs' d''>4
+	     <fs' d''>4
+	}
+	\new Voice {
+	     <<
+		% holding e instead of playing again, seems a bit muddy.
+		{\voiceTwo e2.} \\
+	     	{s4 b b}
+	     >>
+	}
+    >>
+    % measure 8
+    <<
+	\new Voice {
+	     \voiceOne
+	     <fs' d''>2
+	     <d' gs'>4
+	}
+	\new Voice {
+	     \voiceTwo
+	     <e b>
+	}
+    >>
   }
 }
 
